@@ -1,0 +1,158 @@
+<div class="mt-10"></div>
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-sm-6"><h2><span class="badge badge-default">{{HeaderText}}</span></h2></div>
+      <div class="col-sm-6">
+        <button style="float:right"  
+        type="button" 
+        class="btn btn-warning" 
+        (click)="changePassword()">Change Password</button></div>
+    </div>
+  </div>
+
+  <div *ngIf="passwordDialoque()">
+  <form #loginForm="ngForm" (ngSubmit)="login()" required>
+    <div class="card-body" style="background-color: beige;">
+      <div class="mt-5 mb-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <h4><span class="badge badge-secondary">Username</span></h4>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-8"><input class="form-control mr-sm-2" name="username" placeholder="Name"
+                [(ngModel)]="model.username" required /></div>
+              <div class="col-sm-4">
+               </div>
+            </div>
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <h4><span class="badge badge-secondary">Password</span></h4>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-8"><input class="form-control mr-sm-2" name="password" placeholder="PWD" type="password" [(ngModel)]="model.password" /></div>
+              <div class="col-sm-4">
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-footer">
+     
+      <button [disabled]="!loginForm.valid" class="btn btn-success ml-2" type="submit">Login</button>
+
+    </div>
+  </form>
+</div>
+<div *ngIf="!passwordDialoque()">
+<form #PWDForm="ngForm">
+<div class="card">
+ 
+  <div class="card-body"  style="background-color: beige;">
+   
+    <div class="row">
+      <div class="col-sm-2">
+        <h4><span class="badge badge-secondary">Username</span></h4>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-8"><input class="form-control mr-sm-2" name="username" placeholder="Name"
+            [(ngModel)]="model.username" required /></div>
+          <div class="col-sm-4">
+           </div>
+        </div>
+       </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <h4><span class="badge badge-secondary">Password</span></h4>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-8"><input class="form-control mr-sm-2" name="password" placeholder="PWD" type="password" [(ngModel)]="model.password" /></div>
+          <div class="col-sm-4"><button class="btn btn-primary btn-xxs" (click)="checkLogin()">Check</button>  </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5"  *ngIf="isLoggedIn()">
+      <div class="col-sm-2">
+        <h4><span class="badge badge-secondary">New password</span></h4>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-8"><input class="form-control mr-sm-2"  type="password"  name="npw1" [(ngModel)]="npw1"/></div>
+          <div class="col-sm-4">
+           </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-2"  *ngIf="isLoggedIn()">
+      <div class="col-sm-2">
+        <h4><span class="badge badge-secondary">Again</span></h4>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-8"><input class="form-control mr-sm-2"    name="npw2" [(ngModel)]="npw2" type="password" /></div>
+          <div class="col-sm-4">
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div class="card-footer"  *ngIf="isLoggedIn()">
+    <button type="button" 
+    [disabled]="!PWDForm.valid"
+    (click)="changePassword()"
+    class="btn btn-success ml-2">Change</button>
+  </div>
+
+
+
+</div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+<!-- <form >
+<div class="card">
+    <div class="card-header"><h2><span>Please log in</span></h2></div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row mb-1">
+                    <div class="col-sm-6"><h4><span>User name</span></h4></div>
+                    <div class="col-sm-6"><input type=text class=form-control [(ngModel)]="model.username"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"><h4><span>Password</span></h4></div>
+                    <div class="col-sm-6"><input type=password class=form-control [(ngModel)]="model.password"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 mt-1"><button type="submit" class="button button-default" (click)="login()">Login</button></div>
+                </div>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+    </div>
+    <div class="card-footer"></div>
+</div>
+</form> -->
+

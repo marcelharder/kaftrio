@@ -1,0 +1,90 @@
+[
+    {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "megan",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "38"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "demo",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "38"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "marcel",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "admin",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "38"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "megan",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "38"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "marie",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "5"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "mathilde",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "5"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "matroos",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "5"
+      },
+      {
+        "deployed_url": "",
+        "paid_till": "2015-01-02T00:00:00",
+        "username": "charlotte",
+        "PasswordHash": null,
+        "PasswordSalt": null,
+        "user_role": "normal",
+        "active": "1",
+        "contributor_id": "1",
+        "center_id": "6"
+      }
+]

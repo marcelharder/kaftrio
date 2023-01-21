@@ -1,0 +1,85 @@
+<form #aorticForm="ngForm" id="registryDetailsForm" (ngSubmit)="updateRegistryDetails()">
+<div class="card">
+  <div class="card-header">
+    <div class="d-flex flex-row">
+      <div class="p-2"><h4><span>Kaftrio<sup>®</sup> - Observation Details</span></h4></div>
+      <div class="p-2 ms-auto"><button class="btn btn-primary" (click)="deleteRegistry()">Delete</button></div>
+    </div>
+    
+   
+  
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Id number</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.id" name="veld01" class="form-control"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Age</label></div>
+          <div class="col-sm-6"><select [(ngModel)]="currentRegistry.age" name="veld02" class="form-control">
+            <option *ngFor="let an of ageArray" [value]="an.value">{{ an.description }}</option>
+          </select></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Test 01</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test01" name="veld03" class="form-control"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Test 02</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test02" name="veld04" class="form-control"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Test 03</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test03" name="veld05" class="form-control"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Test 04</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test04" name="veld06" class="form-control"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><label class="lbl lbl-secondary">Test 05</label></div>
+          <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test05" name="veld07" class="form-control"></div>
+        </div>
+        
+       
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+        <div class="col-sm-6"><label class="lbl lbl-secondary">Test 06</label></div>
+        <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test06" name="veld08" class="form-control"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"><label class="lbl lbl-secondary">Test 07</label></div>
+        <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test07" name="veld09" class="form-control"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"><label class="lbl lbl-secondary">Test 08</label></div>
+        <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test08" name="veld10" class="form-control"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"><label class="lbl lbl-secondary">Test 09</label></div>
+        <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test09" name="veld11" class="form-control"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"><label class="lbl lbl-secondary">Test 10</label></div>
+        <div class="col-sm-6"><input type="text" [(ngModel)]="currentRegistry.test10" name="veld12" class="form-control"></div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-sm-6">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+              <button type="button" class="btn btn-danger" (click)='cancel()'>Cancel</button>
+              <button type="submit" class="btn btn-success" form="registryDetailsForm">Update</button>
+          </div>
+      </div>
+      <div class="col-sm-6"></div>
+  </div>
+  </div>
+</div>
+</form>

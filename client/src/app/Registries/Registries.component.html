@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card header">
+    <div class="d-flex flex-row">
+      <div class="p-2"><h4><span>Kaftrio<sup>®</sup> - List of observations</span></h4></div>
+      <div class="p-2 ms-auto"><button class="btn btn-primary" (click)="addRegistry()">Add</button></div>
+    </div>
+
+  
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tr>
+        <th style="width: 30%;">Id</th>
+        <th style="width: 40%;">Age</th>
+        <th style="width: 15%;">Comment-01</th>
+        <th style="width: 15%;"></th>
+      </tr>
+      <tr *ngFor="let reg of listRegistries">
+        <td>{{reg.id}}</td>
+        <td>{{reg.age}}</td>
+        <td>{{reg.test01}}</td>
+        <td><button class="btn btn-info" (click)="editRegistry(reg.id)">Edit</button></td>
+       
+      </tr>
+    </table>
+    
+    <div class="d-flex justify-content-center">
+      <pagination [boundaryLinks]="true" [totalItems]="pagination.totalItems" [itemsPerPage]="pagination.itemsPerPage"
+        (pageChanged)="pageChanged($event)" [(ngModel)]="pagination.currentPage" class="pagination-sm"
+        previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+    </div>
+  </div>
+  <div class="card-footer"></div>
+</div>
+
+
+

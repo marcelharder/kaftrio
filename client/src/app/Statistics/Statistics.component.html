@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header"><h4><span>Kaftrio<sup>®</sup> - Statistics</span></h4></div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6"><h5><span>Required sample size</span></h5></div>
+          <div class="col-sm-6">{{reqSampleSize}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><h5><span>Number of records</span></h5></div>
+          <div class="col-sm-6">{{noRecords}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><h5><span>Number of completed records</span></h5></div>
+          <div class="col-sm-6">{{noComplRecords}}</div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6"><h5><span>Single mutation</span></h5></div>
+          <div class="col-sm-6">{{noSingleMutation}}  = {{percSingle| number:'1.2-2'}} %</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><h5><span>Double mutation</span></h5></div>
+          <div class="col-sm-6">{{noDoubleMutation}} = {{percDouble| number:'1.2-2'}} %</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer"></div>
+</div>

@@ -1,0 +1,38 @@
+[
+    {
+        "center_id": 38,
+        "name": "UCRiverside",
+        "address": "",
+        "street": "",
+        "city": "",
+        "pobox": "",
+        "tel": "",
+        "fax": "",
+        "email": "",
+        "country": "US"
+      },
+      {
+        "center_id": 5,
+        "name": "OLVG",
+        "address": "",
+        "street": "",
+        "city": "Amsterdam",
+        "pobox": "",
+        "tel": "",
+        "fax": "",
+        "email": "",
+        "country": "NL"
+      },
+      {
+        "center_id": 6,
+        "name": "Amphia",
+        "address": "",
+        "street": "",
+        "city": "Breda",
+        "pobox": "",
+        "tel": "",
+        "fax": "",
+        "email": "",
+        "country": "NL"
+      }
+]
