@@ -10,7 +10,7 @@ import { Registry } from '../_models/registry';
 
 export class RegistryResolver implements Resolve<Registry[]> {
     pageNumber = 1;
-    pageSize = 12;
+    pageSize = 10;
     
     constructor(private regservice: RegistryService,
         private router: Router,

@@ -1,3 +1,20 @@
-<p>
-  graph works!
-</p>
+<div class="row ml-1 mr-1 mt-3">
+  <div class="col-sm-2">
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn1" class="btn btn-primary m-2" (click)="getFunction01()">graph 1</button></div></div>
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn2" class="btn btn-primary m-2" (click)="getFunction02()">graph 2</button></div></div>
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn3" class="btn btn-primary m-2" (click)="getFunction03()">graph 3</button></div></div>
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn4" class="btn btn-primary m-2" (click)="getFunction04()">graph 4</button></div></div>
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn5" class="btn btn-primary m-2" (click)="getFunction05()">graph 5</button></div></div>
+    <div class="row"><div class="col-sm-12"><button type="button" id="btn6" class="btn btn-primary m-2" (click)="getFunction06()">graph 6</button></div></div>
+  </div>
+  <div class="col-sm-10" >
+    <app-age *ngIf="showGraphNo === 3"           [gm]="this.gm"></app-age>
+   <!--  <app-vlad *ngIf="showGraphNo === 1"          [gm]="this.gm"></app-vlad>
+    <app-age *ngIf="showGraphNo === 3"           [gm]="this.gm"></app-age>
+    <app-casemix *ngIf="showGraphNo === 2"       [gm]="this.gm"></app-casemix>
+    <app-fiveriskbands *ngIf="showGraphNo === 4" [gm]="this.gm"></app-fiveriskbands>
+    <app-peryear *ngIf="showGraphNo === 5"       [gm]="this.gm"></app-peryear>
+    <app-permonth *ngIf="showGraphNo === 6"      [gm]="this.gm"></app-permonth> -->
+  </div>
+
+</div>

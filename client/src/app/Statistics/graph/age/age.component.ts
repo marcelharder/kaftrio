@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
+import { GraphModel } from 'src/app/_models/GraphModel';
 
 
 @Component({
@@ -9,8 +10,20 @@ import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsToolt
   styleUrls: ['./age.component.css']
 })
 export class AgeComponent implements OnInit {
+  @Input() gm: GraphModel;
+  data:any = [];
+  title = "";
 
-  ngOnInit() {  }
+  ngOnInit() {
+    var num: number = 0;
+    var i: number;
+    var help: Array<any> = [];
+    for (i = num; i < this.gm.dataXas.length; i++) { help.push([this.gm.dataXas[i], this.gm.dataYas[i]]); }
+    this.data = help;
+    this.title = this.gm.caption;
+
+    }
+
   public pieChartOptions: ChartOptions = {responsive: true,};
   public pieChartLabels: Label[] = [['SciFi'], ['Drama'], 'Comedy'];
   public pieChartData: SingleDataSet = [30, 50, 20];

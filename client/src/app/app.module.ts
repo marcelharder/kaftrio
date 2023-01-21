@@ -5,6 +5,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginationModule} from "ngx-bootstrap/pagination";
+import { TabsModule} from "ngx-bootstrap/tabs";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { RegistryDetailsComponent } from './RegistryDetails/RegistryDetails.comp
 import { RegistryDetailsResolver } from './_resolvers/RegistryDetails.resolver';
 import { ChartsModule } from 'ng2-charts';
 import { AgeComponent } from './Statistics/graph/age/age.component';
+import { GraphComponent } from './Statistics/graph/graph.component';
+import { StatisticsSummaryComponent } from './Statistics/statisticsSummary/statisticsSummary.component';
+import { GraphService } from './_services/Graph.service';
 
 export function tokenGetter() { return localStorage.getItem('token'); }
 
@@ -39,9 +43,12 @@ export function tokenGetter() { return localStorage.getItem('token'); }
       StatisticsComponent,
       RegistriesComponent,
       RegistryDetailsComponent,
-      AgeComponent
+      AgeComponent,
+      GraphComponent,
+      StatisticsSummaryComponent,
    ],
   imports: [
+    TabsModule.forRoot(),
     ChartsModule,
     FormsModule,
     HttpClientModule,
@@ -63,7 +70,7 @@ export function tokenGetter() { return localStorage.getItem('token'); }
   }),
 
   ],
-  providers: [AuthGuard,RegistryResolver, RegistryDetailsResolver],
+  providers: [AuthGuard,RegistryResolver, RegistryDetailsResolver, GraphService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
