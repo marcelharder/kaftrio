@@ -19,7 +19,15 @@ export class GraphComponent implements OnInit {
   ngOnInit() {
   }
 
-  getFunction01(){this.alertify.info("functie 1");this.graph.getAge(this.currentUserId, this.selectedHospital).subscribe((next) => { this.gm = next; this.showGraphNo = 3; });}
+  getFunction01(){this.alertify.info("functie 1");
+  this.graph.getAge(this.currentUserId, this.selectedHospital).subscribe(
+    (next) => { this.gm = next; this.showGraphNo = 3; },
+    (error) => {this.alertify.error(error)});}
+  
+  
+  
+  
+  
   getFunction02(){this.alertify.info("functie 2")}
   getFunction03(){this.alertify.info("functie 3")}
   getFunction04(){this.alertify.info("functie 4")}
