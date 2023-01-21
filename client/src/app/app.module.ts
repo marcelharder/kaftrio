@@ -20,6 +20,8 @@ import { RegistryResolver } from './_resolvers/Registry.resolver';
 import { FormsModule } from '@angular/forms';
 import { RegistryDetailsComponent } from './RegistryDetails/RegistryDetails.component';
 import { RegistryDetailsResolver } from './_resolvers/RegistryDetails.resolver';
+import { ChartsModule } from 'ng2-charts';
+import { AgeComponent } from './Statistics/graph/age/age.component';
 
 export function tokenGetter() { return localStorage.getItem('token'); }
 
@@ -36,9 +38,11 @@ export function tokenGetter() { return localStorage.getItem('token'); }
       AboutComponent,
       StatisticsComponent,
       RegistriesComponent,
-      RegistryDetailsComponent
+      RegistryDetailsComponent,
+      AgeComponent
    ],
   imports: [
+    ChartsModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,
