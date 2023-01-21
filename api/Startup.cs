@@ -56,6 +56,7 @@ namespace api
             services.AddScoped<IUser, UserRepository>();
             services.AddScoped<IHospitalRepository, HospitalRepository>();
             services.AddScoped<IRegistryRepository, RegistryRepository>();
+            services.AddScoped<IElementaryStatistics, ElementaryStatistics>();
           
             services.AddScoped<Dropdownlists>();
             services.AddScoped<SpecialMaps>();

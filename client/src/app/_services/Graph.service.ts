@@ -9,7 +9,7 @@ export class GraphService {
 
     constructor(private http: HttpClient) { }
 
-    getAge(userId: number,id: number) { return this.http.get<GraphModel>(this.baseUrl + 'ageGraph/' + userId + '/' + id); }
+    getAge(userId: number,id: number) { return this.http.get<GraphModel>(this.baseUrl + 'ageGraph'); }
    
    
    // getBand(userId: number,id: number) { return this.http.get<GraphModel>(this.baseUrl + 'Graph/euroGraphPerHospital/' + userId + '/' + id); }
